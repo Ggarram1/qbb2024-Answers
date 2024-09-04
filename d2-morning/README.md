@@ -86,7 +86,7 @@ There are more pseudogenes on a larger range of chromosomes than there are genes
 
 ## GENCODE Question 2
 ### Why grep pseudogene gene.gtf is not an effective way to obtain the above data
-Simply "grep"-ing the pseudogene entries out, all rows containing "pseudogene" will be shown. This filters by IG...gene or IG...pseudogene rather than simply the word "pseudogene". 
+Simply "grep"-ing the pseudogene entries out, all rows containing "pseudogene" will be shown. This filters by IG...gene or IG...pseudogene rather than simply the word "pseudogene". Instead, the above pattern should be used to identify all pseudogenes.
 
 ## GENCODE Question 3
-### 
+(qb24) cmdb@QuantBio-03 d2-lunch % cut -f 1,4,5,10 ../d2-lunch/gene-tabs.bed > gene-tabs-final.bed
