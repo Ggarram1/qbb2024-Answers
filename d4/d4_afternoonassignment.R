@@ -71,4 +71,11 @@ p1+p2 = plot
   #geom_histogram(alpha=0.5)
 
 #2.6: Statistical Analysis
+
+
+
+
+
+#close the file
+fs.close()
   
