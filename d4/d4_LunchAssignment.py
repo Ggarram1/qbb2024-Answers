@@ -47,7 +47,7 @@ for line in fs:
 #print(tissue_samples) - to check before continuing the code
 
 #3:determine sample_IDs present in gene expression file
-#get metadata file name:
+#get expression data file:
 filename = sys.argv[3]
 #open file in read mode
 fs=open(filename, mode='r')
@@ -76,8 +76,8 @@ for tissue, samples in tissue_samples.items():
 for key, value in tissue_columns.items():
 #   print(key, len(value))
 
-max_value = 0
-max_tissue = ""
+    max_value = 0
+    max_tissue = ""
 
 for tissue, samples in tissue_columns.item():
     if len(samples)>= max_value:
@@ -85,7 +85,11 @@ for tissue, samples in tissue_columns.item():
         max_tissue = tissue
 
 print (max_tissue, max_value)
-
+#organs with greater tissue diversity, ex. brain, have the highest nunber of samples.
+#smaller organs, ex. spleen, have the fewest samples.
+#During a git push problem, I had had to delete a couple of the GTEx files (I accidentally commited them)
+#So I cannot re-run the code anymore (without re-downloading but I am not sure what the source is)
+#This is why I have not included numbers above.
 
 
 
