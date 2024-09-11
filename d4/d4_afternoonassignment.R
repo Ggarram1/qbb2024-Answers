@@ -52,28 +52,26 @@ summary(full_model)
 #This would yield an estimate of 78.495 DNMs
 
 #2.5
-p1 <- ggplot(aes(x=Mother_age, y=n_maternal_dnm)) +
-  geom_line(color="#eee9f8", size=2) +
-  ggtitle("Maternal DNMs") +
-  theme_ipsum()
-p2 <- ggplot(aes(x=Father_age, y=n_paternal_dnm)) +
-  geom_line(color="#177",size=2) +
-  ggtitle("Price: range 1-100") +
-  theme_ipsum()
-p1+p2 = plot
-#summary(plot)
-
-#ggplot(data=dnm_by_parental_age,
- #     mapping = aes(x=Mother_age, y=n_maternal_dnm,n_paternal_dnm)) + stat_smooth(method="lm")+
-  #geom_point()
-#ggplot(data=dnm_by_parental_age,
-       #mapping = aes (x=Father_age, y=n_paternal_dnm))+
-  #geom_histogram(alpha=0.5)
+ggplot(data=dnm_by_parental_age) +
+  geom_histogram(aes(x=n_maternal_dnm),color="#ef99f8", size=2, alpha=0.5)+
+  geom_histogram(aes(x=n_paternal_dnm),color="#bb7977", size=2, alpha=0.5)+
+  ggtitle("Maternal vs. Paternal DNMs by Age")
 
 #2.6: Statistical Analysis
+t.test(dnm_by_parental_age$n_maternal_dnm, dnm_by_parental_age$n_paternal_dnm)
+#p1 <- ggplot(data=dnm_by_parental_age, aes(x=n_maternal_dnm)) +
+  #geom_histogram(color="#eee9f8", size=2) +
+  #ggtitle("Maternal DNMs")
+#p2 <- ggplot(data=dnm_by_parental_age, aes(x=n_paternal_dnm)) +
+  #geom_histogram(color="#177",size=2) +
+  #ggtitle("Paternal DNMs")
+#p1+p2 = plot
+summary(plot)
 
-
-
+#An (unpaired) T test was chosen as the maternal and paternal DNM counts are
+#independent from one another.
+#The p value from the t test is 2.2e^-16. This suggest a non-random cause
+#for the difference. 
 
 
 #close the file
