@@ -75,9 +75,9 @@ t.test(dnm_by_parental_age$n_maternal_dnm, dnm_by_parental_age$n_paternal_dnm)
 #p1+p2 = plot
 summary(plot)
 
-#An (unpaired) T test was chosen as the maternal and paternal DNM counts are
-#separate measurements, rather than repeated measurements of the same variable.
-#This test is to consider these separately - that is, we are looking to determine 
+#A (paired) T test was chosen as the maternal and paternal DNM counts are
+#measurements in the same organism, rather than separate measurements of the variables.
+#This test is to consider these together - that is, we are looking to determine 
 #if there is a difference in number of paternal DNMs depending on father age
 #and the number of maternal DNMs depending on mother age - we are not asking if
 #the number of Maternal DNMs at a given age is different to the number of paternal
