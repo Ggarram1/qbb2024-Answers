@@ -37,7 +37,7 @@ for line in fs:
 #split line into fields and remove next line characters
     fields=line.rstrip("\n").split("\t")
 #assign key to gene and value to tissue
-    key = fields[2] 
+    key = fields[6] 
     value =fields[0]
 #initialize dict from key with list to hold samples
 #append the value (column) after the tissue sample 
@@ -89,10 +89,19 @@ for tissue, samples in tissue_columns.items():
         max_tissue = tissue
 
 print(max_tissue, max_value)
-#organs with greater tissue diversity, ex. brain, have the highest nunber of samples.
-#smaller organs, ex. spleen, have the fewest samples.
+#organs with greater tissue diversity, skeletal muscle, have the highest nunber of genes. 
+#The tissue with the highest number is the skeletal muscle, with 803 genes identified.
+max_value = 1000
+max_tissue = ""
 
+for tissue, samples in tissue_columns.items():
+    if len(samples)<= max_value:
+        min_value = len(samples)
+        min_tissue = tissue
 
+print(min_tissue, min_value)
+#Smaller and less diverse tissues have fewer genes identified. The tissue with the fewest genes identified
+#are cells - Leukemia cell line (CML), with 0 counted.
 
 #close the file
 #fs.close() 
