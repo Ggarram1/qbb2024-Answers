@@ -79,23 +79,29 @@ for tissue, samples in tissue_samples.items():
 #for key, value in tissue_columns.items():
 #    print(key, len(value))
 
-
+#First, the maximum value/tissues are initiated to 0 and to ""
 max_value = 0
 max_tissue = ""
 
+#for loop to check the samples for each tissue
 for tissue, samples in tissue_columns.items():
-    if len(samples)>= max_value:
+#Only change the max value and max tissue if the number of samples is greater than 0 or the previous one    
+    if len(samples)>= max_value:      
         max_value = len(samples)
         max_tissue = tissue
 
 print(max_tissue, max_value)
 #organs with greater tissue diversity, skeletal muscle, have the highest nunber of genes. 
 #The tissue with the highest number is the skeletal muscle, with 803 genes identified.
+
+#First, the maximum value/tissues are initiated to 1000 (following the previous excercise, we know the tissue with the greatest number) and to ""
 max_value = 1000
 max_tissue = ""
 
 for tissue, samples in tissue_columns.items():
+#for loop to check the samples for each tissue    
     if len(samples)<= max_value:
+#Only change the min value and min tissue if the number of samples is less than 1000 or the previous one         
         min_value = len(samples)
         min_tissue = tissue
 
