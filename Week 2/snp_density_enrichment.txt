@@ -1,0 +1,10 @@
+MAF	Feature_Type	SNP_Count	Feature_Count	Density_Enrichment
+0.01	Intron	   21047	   85645	.2457
+0.01	Exon	   21047	   85645	.2457
+0.01	Other	       0	   30753	0
+0.05	Intron	   21047	   85645	.2457
+0.05	Exon	   21047	   85645	.2457
+0.05	Other	       0	   30753	0
+0.1	Intron	   21047	   85645	.2457
+0.1	Exon	   21047	   85645	.2457
+0.1	Other	       0	   30753	0
