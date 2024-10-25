@@ -1,0 +1,76 @@
+
+
+
+
+
+Analysis Type:	PANTHER Overrepresentation Test (Released 20240807)
+Annotation Version and Release Date:	GO Ontology database DOI:  10.5281/zenodo.12173881 Released 2024-06-17
+Analyzed List:	upload_1 (Drosophila melanogaster)
+Reference List:	Drosophila melanogaster (all genes in database)
+Test Type:	FISHER
+Correction:	FDR
+GO biological process complete	Drosophila melanogaster - REFLIST (13821)	upload_1 (113)	upload_1 (expected)	upload_1 (over/under)	upload_1 (fold Enrichment)	upload_1 (raw P-value)	upload_1 (FDR)
+bicarbonate transport (GO:0015701)	3	2	.02	+	81.54	1.98E-04	3.64E-02
+purine ribonucleoside monophosphate catabolic process (GO:0009169)	4	2	.03	+	61.15	3.93E-04	5.17E-02
+purine nucleoside monophosphate catabolic process (GO:0009128)	4	2	.03	+	61.15	3.93E-04	5.08E-02
+cellular response to purine-containing compound (GO:0071415)	4	2	.03	+	61.15	3.93E-04	4.99E-02
+cellular response to caffeine (GO:0071313)	4	2	.03	+	61.15	3.93E-04	4.90E-02
+cellular response to alkaloid (GO:0071312)	4	2	.03	+	61.15	3.93E-04	4.82E-02
+AMP catabolic process (GO:0006196)	4	2	.03	+	61.15	3.93E-04	4.74E-02
+mannose metabolic process (GO:0006013)	10	5	.08	+	61.15	8.15E-09	8.57E-06
+triglyceride metabolic process (GO:0006641)	27	5	.22	+	22.65	2.34E-06	1.23E-03
+acylglycerol metabolic process (GO:0006639)	37	5	.30	+	16.53	1.18E-05	4.35E-03
+neutral lipid metabolic process (GO:0006638)	37	5	.30	+	16.53	1.18E-05	4.14E-03
+monocarboxylic acid transport (GO:0015718)	33	4	.27	+	14.83	1.44E-04	2.87E-02
+fatty acid oxidation (GO:0019395)	37	4	.30	+	13.22	2.27E-04	3.98E-02
+carbohydrate transport (GO:0008643)	38	4	.31	+	12.87	2.52E-04	4.04E-02
+lipid oxidation (GO:0034440)	38	4	.31	+	12.87	2.52E-04	3.95E-02
+cellular lipid catabolic process (GO:0044242)	84	7	.69	+	10.19	5.46E-06	2.51E-03
+fatty acid metabolic process (GO:0006631)	138	11	1.13	+	9.75	1.61E-08	1.48E-05
+organophosphate catabolic process (GO:0046434)	65	5	.53	+	9.41	1.87E-04	3.52E-02
+monoatomic anion transport (GO:0006820)	66	5	.54	+	9.27	2.01E-04	3.60E-02
+response to toxic substance (GO:0009636)	80	6	.65	+	9.17	4.80E-05	1.22E-02
+organic acid transport (GO:0015849)	81	6	.66	+	9.06	5.15E-05	1.26E-02
+carboxylic acid transport (GO:0046942)	81	6	.66	+	9.06	5.15E-05	1.22E-02
+monosaccharide metabolic process (GO:0005996)	85	6	.69	+	8.63	6.76E-05	1.46E-02
+hexose metabolic process (GO:0019318)	72	5	.59	+	8.49	3.02E-04	4.28E-02
+lipid catabolic process (GO:0016042)	130	9	1.06	+	8.47	1.14E-06	7.00E-04
+monocarboxylic acid metabolic process (GO:0032787)	194	13	1.59	+	8.20	6.18E-09	7.57E-06
+organic anion transport (GO:0015711)	120	8	.98	+	8.15	6.11E-06	2.50E-03
+carbohydrate metabolic process (GO:0005975)	240	12	1.96	+	6.12	6.00E-07	4.01E-04
+carboxylic acid metabolic process (GO:0019752)	356	17	2.91	+	5.84	4.41E-09	1.08E-05
+oxoacid metabolic process (GO:0043436)	357	17	2.92	+	5.82	4.60E-09	8.46E-06
+organic acid metabolic process (GO:0006082)	360	17	2.94	+	5.78	5.21E-09	7.67E-06
+glycerolipid metabolic process (GO:0046486)	152	7	1.24	+	5.63	2.47E-04	4.04E-02
+cellular lipid metabolic process (GO:0044255)	393	17	3.21	+	5.29	1.92E-08	1.57E-05
+chemical homeostasis (GO:0048878)	275	11	2.25	+	4.89	1.53E-05	4.89E-03
+lipid metabolic process (GO:0006629)	529	19	4.33	+	4.39	5.12E-08	3.77E-05
+small molecule metabolic process (GO:0044281)	753	26	6.16	+	4.22	2.60E-10	9.58E-07
+transmembrane transport (GO:0055085)	783	27	6.40	+	4.22	1.13E-10	8.28E-07
+cellular response to chemical stimulus (GO:0070887)	263	9	2.15	+	4.19	3.04E-04	4.22E-02
+cellular catabolic process (GO:0044248)	316	10	2.58	+	3.87	2.62E-04	4.02E-02
+homeostatic process (GO:0042592)	457	12	3.74	+	3.21	3.55E-04	4.75E-02
+monoatomic ion transport (GO:0006811)	463	12	3.79	+	3.17	3.99E-04	4.74E-02
+response to chemical (GO:0042221)	808	17	6.61	+	2.57	2.92E-04	4.21E-02
+catabolic process (GO:0009056)	918	19	7.51	+	2.53	1.53E-04	2.96E-02
+transport (GO:0006810)	1795	30	14.68	+	2.04	1.02E-04	2.15E-02
+establishment of localization (GO:0051234)	1914	30	15.65	+	1.92	3.08E-04	4.19E-02
+metabolic process (GO:0008152)	4423	59	36.16	+	1.63	9.81E-06	3.80E-03
+biological regulation (GO:0065007)	4181	17	34.18	-	.50	2.76E-04	4.06E-02
+regulation of biological process (GO:0050789)	3942	14	32.23	-	.43	5.79E-05	1.33E-02
+regulation of cellular process (GO:0050794)	3613	9	29.54	-	.30	1.43E-06	8.10E-04
+cell differentiation (GO:0030154)	1541	2	12.60	-	.16	4.08E-04	4.77E-02
+cellular developmental process (GO:0048869)	1543	2	12.62	-	.16	4.11E-04	4.72E-02
+organelle organization (GO:0006996)	1545	2	12.63	-	.16	2.64E-04	3.96E-02
+regulation of primary metabolic process (GO:0080090)	1671	2	13.66	-	.15	1.17E-04	2.39E-02
+regulation of cellular metabolic process (GO:0031323)	1837	2	15.02	-	.13	3.42E-05	8.98E-03
+regulation of metabolic process (GO:0019222)	2039	2	16.67	-	.12	6.07E-06	2.62E-03
+regulation of gene expression (GO:0010468)	1594	1	13.03	-	.08	2.26E-05	6.64E-03
+regulation of macromolecule biosynthetic process (GO:0010556)	1608	1	13.15	-	.08	2.25E-05	6.88E-03
+regulation of cellular biosynthetic process (GO:0031326)	1625	1	13.29	-	.08	2.29E-05	6.49E-03
+regulation of biosynthetic process (GO:0009889)	1644	1	13.44	-	.07	1.46E-05	4.88E-03
+regulation of macromolecule metabolic process (GO:0060255)	1865	1	15.25	-	.07	2.46E-06	1.21E-03
+regulation of nucleobase-containing compound metabolic process (GO:0019219)	1272	0	10.40	-	 < 0.01	2.65E-05	7.22E-03
+regulation of RNA biosynthetic process (GO:2001141)	1067	0	8.72	-	 < 0.01	2.43E-04	4.15E-02
+regulation of DNA-templated transcription (GO:0006355)	1067	0	8.72	-	 < 0.01	2.43E-04	4.06E-02
+regulation of RNA metabolic process (GO:0051252)	1210	0	9.89	-	 < 0.01	6.59E-05	1.47E-02
