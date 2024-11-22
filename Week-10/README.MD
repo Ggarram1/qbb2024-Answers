@@ -1,0 +1,6 @@
+# What do each of these values mean, based on the descriptions of what is being labeled # 
+The structure of the gene_data.txt file is as follows: Gene,nascentRNA,PCNA,ratio
+these values are in reference to the gene being analyzed (APEX1, PIM2, etc...), the mean signal intensity for nascent RNA, the mean signal intensity for PCNA in the same region as was measured for nascent RNA, and the log2 transformed ratio of these intensities. There are four rows per nucleus, one for each gene (APEX1, PIM2, etc...).
+
+# Look at the knocked-down gene with the highest ratio and the one with the lowest ratio. Look up what their functions are and explain if you think this result makes sense.#
+The KDed gene with the lowest ratio is POLR2B and the one with the highest is SRSF1 (although it is close). POLR2B is a subunit of RNA polymerase II while SRSF1 regulates RNA splicing/stability. As the ratio is a measurement of mean signal intensity of nascent RNA to PCNA (involved in DNA replication/repair), it is quite logical that knockdown of POLR2B would have a greater impact on this ratio that knockdown of SRSF1.
