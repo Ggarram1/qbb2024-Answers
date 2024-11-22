@@ -334,7 +334,7 @@ for gene in genes:
 
 #write the log ratio data to a text file
 with open('log_ratios.txt', 'w') as f:
-    # Write header
+    #write header
     f.write("Gene\tField\tLabel\tLog_Ratio\n")
     
     #write data for each nucleus
@@ -343,3 +343,76 @@ with open('log_ratios.txt', 'w') as f:
         f.write(f"{gene}\t{field}\t{label}\t{log_ratio:.4f}\n")
 
 print("Log ratios have been written to log_ratios.txt.")
+
+#define function to calculate mean signals for each nucleus and log2 ratio
+def calculate_mean_signals_and_ratios(gene, field, label_array, nascentRNA_image, PCNA_image):
+    #initialize lists to store the results for each nucleus
+    nascentRNA_values = []
+    PCNA_values = []
+    ratio_values = []
+
+    #get unique labels
+    unique_labels = np.unique(label_array)
+      #exclude background (label 0)
+    unique_labels = unique_labels[unique_labels > 0]
+
+    for label in unique_labels:
+        #create mask for current nucleus
+        nucleus_mask = label_array == label
+        
+        #extract signal for nascent RNA and PCNA for current nucleus
+        nascentRNA_signal = nascentRNA_image[nucleus_mask]
+        PCNA_signal = PCNA_image[nucleus_mask]
+        
+        #calculate the mean signal for both channels
+        mean_nascentRNA = np.mean(nascentRNA_signal) if len(nascentRNA_signal) > 0 else 0
+        mean_PCNA = np.mean(PCNA_signal) if len(PCNA_signal) > 0 else 0
+        
+        #calculate the log2-transformed ratio
+        if mean_PCNA > 0:
+            log_ratio = np.log2(mean_nascentRNA / mean_PCNA)
+        else:
+            log_ratio = 0
+        
+        #append the results to the lists
+        nascentRNA_values.append(mean_nascentRNA)
+        PCNA_values.append(mean_PCNA)
+        ratio_values.append(log_ratio)
+
+    return nascentRNA_values, PCNA_values, ratio_values
+
+#initialize list for data for all genes and fields
+all_data = []
+
+#loop through each gene and field
+for gene in genes:
+    for field in fields:
+        #get images for nascentRNA and PCNA for the current gene and field
+        field_image = image_data[gene][fields.index(field)]
+        nascentRNA_image = field_image[..., 1]  # Assuming nascentRNA is at index 1
+        PCNA_image = field_image[..., 2]  # Assuming PCNA is at index 2
+
+        # Get the corresponding DAPI mask and label array
+        dapi_mask = binary_masks[gene][fields.index(field)]
+        label_array = find_labels(dapi_mask)
+        
+        # Calculate mean signals and ratios for each nucleus in this field
+        nascentRNA_values, PCNA_values, ratio_values = calculate_mean_signals_and_ratios(
+            gene, field, label_array, nascentRNA_image, PCNA_image
+        )
+
+        # Combine the results for this field
+        for nascentRNA, PCNA, ratio in zip(nascentRNA_values, PCNA_values, ratio_values):
+            all_data.append([gene, nascentRNA, PCNA, ratio])
+
+# Write the results to a text file
+with open('gene_data.txt', 'w') as f:
+    # Write header
+    f.write("Gene,nascentRNA,PCNA,ratio\n")
+    
+    # Write data for each nucleus
+    for entry in all_data:
+        gene, nascentRNA, PCNA, ratio = entry
+        f.write(f"{gene},{nascentRNA:.4f},{PCNA:.4f},{ratio:.4f}\n")
+
+print("Data has been written to gene_data.txt.")
